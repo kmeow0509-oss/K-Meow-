@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alondra K-pop Shop</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+font-family:Arial,sans-serif;
+background:#fff;
+color:#111;
+}
+header{
+background:#f8d7e8;
+padding:20px;
+text-align:center;
+}
+header h1{
+font-size:2rem;
+}
+.hero{
+padding:50px 20px;
+text-align:center;
+}
+.hero h2{
+font-size:2rem;
+margin-bottom:10px;
+}
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px;
+}
+.card{
+border:1px solid #eee;
+border-radius:15px;
+padding:15px;
+text-align:center;
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+.price{
+font-size:1.2rem;
+font-weight:bold;
+margin:10px 0;
+}
+button{
+background:#111;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:30px;
+cursor:pointer;
+}
+button:hover{
+background:#333;
+}
+footer{
+padding:30px;
+text-align:center;
+background:#fafafa;
+margin-top:40px;
+}
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Alondra K-pop Shop</h1>
+<p>Álbums, Photocards y Preorders</p>
+</header>
+
+<section class="hero">
+<h2>Bienvenid@ a mi tienda</h2>
+<p>Merch original de K-pop con envíos a todo México.</p>
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=600">
+<h3>ENHYPEN Album</h3>
+<p class="price">$320 MXN</p>
+<button onclick="window.location.href='https://wa.me/5210000000000?text=Hola,%20quiero%20comprar%20el%20ENHYPEN%20Album'">
+Comprar
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600">
+<h3>Heeseung Photocard</h3>
+<p class="price">$180 MXN</p>
+<button onclick="window.location.href='https://wa.me/5210000000000?text=Hola,%20quiero%20comprar%20la%20Heeseung%20Photocard'">
+Comprar
+</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600">
+<h3>Preorder Japón</h3>
+<p class="price">Desde $450 MXN</p>
+<button onclick="window.location.href='https://wa.me/5210000000000?text=Hola,%20quiero%20entrar%20al%20preorder%20de%20Japón'">
+Reservar
+</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Alondra K-pop Shop</p>
+<p>Instagram: @tuusuario</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5210000000000">WhatsApp</a>
+
+</body>
+</html>
