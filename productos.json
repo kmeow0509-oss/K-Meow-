@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Heeseung Lucky Draw",
+    "grupo": "ENHYPEN",
+    "precio": 180,
+    "stock": 3,
+    "imagen": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800"
+  },
+  {
+    "id": 2,
+    "nombre": "ROMANCE: UNTOLD Album",
+    "grupo": "ENHYPEN",
+    "precio": 320,
+    "stock": 5,
+    "imagen": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800"
+  },
+  {
+    "id": 3,
+    "nombre": "BTS POB",
+    "grupo": "BTS",
+    "precio": 250,
+    "stock": 2,
+    "imagen": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800"
+  }
+]
