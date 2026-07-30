@@ -1,383 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>K Meow Shop</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#fff;
-color:#111;
-}
-
-header{
-position:sticky;
-top:0;
-background:white;
-border-bottom:1px solid #eee;
-padding:18px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:100;
-}
-
-.logo{
-font-size:1.4rem;
-font-weight:700;
-letter-spacing:.5px;
-}
-
-nav{
-display:flex;
-gap:30px;
-}
-
-nav a{
-text-decoration:none;
-color:#111;
-font-weight:500;
-}
-
-.cart-btn{
-background:#111;
-color:white;
-padding:10px 18px;
-border-radius:999px;
-cursor:pointer;
-}
-
-.hero{
-height:420px;
-background:linear-gradient(135deg,#fde7f2,#f8d7e8);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:30px;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:1.1rem;
-margin-bottom:25px;
-}
-
-.hero button{
-background:#111;
-color:white;
-border:none;
-padding:14px 28px;
-border-radius:999px;
-cursor:pointer;
-font-size:1rem;
-}
-
-.section{
-padding:70px 40px;
-}
-
-.section h2{
-font-size:2rem;
-margin-bottom:30px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
-}
-
-.card{
-border:1px solid #eee;
-border-radius:20px;
-overflow:hidden;
-transition:.3s;
-background:white;
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 30px rgba(0,0,0,.08);
-}
-
-.card img{
-width:100%;
-height:300px;
-object-fit:cover;
-}
-
-.card-content{
-padding:18px;
-}
-
-.card h3{
-font-size:1.05rem;
-margin-bottom:8px;
-}
-
-.price{
-font-size:1.2rem;
-font-weight:700;
-margin:12px 0;
-}
-
-.card button{
-width:100%;
-background:#111;
-color:white;
-border:none;
-padding:12px;
-border-radius:999px;
-cursor:pointer;
-}
-
-.cart-panel{
-position:fixed;
-right:-400px;
-top:0;
-width:380px;
-height:100%;
-background:white;
-box-shadow:-10px 0 30px rgba(0,0,0,.15);
-transition:.35s;
-padding:25px;
-z-index:1000;
-display:flex;
-flex-direction:column;
-}
-
-.cart-panel.active{
-right:0;
-}
-
-.cart-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:20px;
-}
-
-.cart-items{
-flex:1;
-overflow-y:auto;
-}
-
-.cart-item{
-display:flex;
-justify-content:space-between;
-margin-bottom:15px;
-padding-bottom:15px;
-border-bottom:1px solid #eee;
-}
-
-.checkout{
-margin-top:20px;
-}
-
-.checkout button{
-width:100%;
-background:#111;
-color:white;
-padding:14px;
-border:none;
-border-radius:999px;
-font-size:1rem;
-cursor:pointer;
-}
-
-footer{
-padding:50px 30px;
-text-align:center;
-border-top:1px solid #eee;
-margin-top:50px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:999px;
-text-decoration:none;
-font-weight:600;
-}
-
-@media(max-width:768px){
-header{
-padding:15px 20px;
-}
-
-nav{
-display:none;
-}
-
-.hero h1{
-font-size:2rem;
-}
-
-.cart-panel{
-width:100%;
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Meow Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="header">
+    <div class="logo">K Meow Shop</div>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#preorders">Preorders</a>
+      <a href="#gos">GOs</a>
+      <a href="https://instagram.com/k_meow._" target="_blank">@k_meow._</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+  </header>
 
-<header>
-<div class="logo">K Meow Shop</div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>K Meow Shop</h1>
+      <p>Photocards, álbumes y preorders originales de K-pop.</p>
+      <a href="#productos" class="primary-btn">Ver productos</a>
+    </div>
+  </section>
 
-<nav>
-<a href="#albums">Álbums</a>
-<a href="#pcs">Photocards</a>
-<a href="#preorders">Preorders</a>
-<a href="#gos">GOs</a>
-</nav>
+  <section class="toolbar">
+    <input id="searchInput" type="text" placeholder="Buscar photocards, álbumes...">
+    <select id="groupFilter">
+      <option value="all">Todos los grupos</option>
+      <option value="ENHYPEN">ENHYPEN</option>
+      <option value="BTS">BTS</option>
+      <option value="SEVENTEEN">SEVENTEEN</option>
+      <option value="Stray Kids">Stray Kids</option>
+    </select>
+  </section>
 
-<div class="cart-btn" onclick="toggleCart()">
-🛒 <span id="cart-count">0</span>
-</div>
-</header>
+  <main class="container">
+    <section id="productos">
+      <h2>Productos</h2>
+      <div id="productGrid" class="grid"></div>
+    </section>
+  </main>
 
-<section class="hero">
-<div>
-<h1>K Meow Shop</h1>
-<p>Merch original de K-pop • Japón • Corea • GOs</p>
-<button>Comprar ahora</button>
-</div>
-</section>
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <strong>$<span id="cartTotal">0</span> MXN</strong>
+      </div>
+      <button id="checkoutBtn" class="primary-btn">Pagar por WhatsApp</button>
+      <p class="checkout-note">Mercado Pago se conectará en la siguiente etapa.</p>
+    </div>
+  </aside>
 
-<section class="section" id="pcs">
-<h2>Photocards destacadas</h2>
+  <a class="whatsapp-float" href="https://wa.me/522311325814" target="_blank">WhatsApp</a>
 
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=700">
-<div class="card-content">
-<h3>Heeseung Lucky Draw</h3>
-<p class="price">$180 MXN</p>
-<button onclick="addToCart('Heeseung Lucky Draw',180)">
-Agregar al carrito
-</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=700">
-<div class="card-content">
-<h3>Sunghoon POB</h3>
-<p class="price">$220 MXN</p>
-<button onclick="addToCart('Sunghoon POB',220)">
-Agregar al carrito
-</button>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700">
-<div class="card-content">
-<h3>ROMANCE: UNTOLD Album</h3>
-<p class="price">$320 MXN</p>
-<button onclick="addToCart('ROMANCE: UNTOLD Album',320)">
-Agregar al carrito
-</button>
-</div>
-</div>
-
-</div>
-</section>
-
-<div class="cart-panel" id="cart">
-
-<div class="cart-header">
-<h3>Tu carrito</h3>
-<button onclick="toggleCart()">✕</button>
-</div>
-
-<div class="cart-items" id="cart-items"></div>
-
-<div class="checkout">
-<p><strong>Total: $<span id="total">0</span> MXN</strong></p>
-<br>
-<button onclick="checkout()">
-Proceder al pago
-</button>
-</div>
-
-</div>
-
-<footer>
-<p><strong>K Meow Shop</strong></p>
-<p>Instagram: @k_meow._</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/522311325814">
-WhatsApp
-</a>
-
-<script>
-let cart=[];
-
-function toggleCart(){
-document.getElementById('cart').classList.toggle('active');
-}
-
-function addToCart(name,price){
-cart.push({name,price});
-updateCart();
-toggleCart();
-}
-
-function updateCart(){
-const items=document.getElementById('cart-items');
-items.innerHTML='';
-
-let total=0;
-
-cart.forEach(item=>{
-total+=item.price;
-
-items.innerHTML+=`
-<div class="cart-item">
-<span>${item.name}</span>
-<strong>$${item.price}</strong>
-</div>
-`;
-});
-
-document.getElementById('total').textContent=total;
-document.getElementById('cart-count').textContent=cart.length;
-}
-
-function checkout(){
-let message='Hola, quiero comprar:%0A';
-
-cart.forEach(item=>{
-message+=`- ${item.name} ($${item.price})%0A`;
-});
-
-window.location.href=
-`https://wa.me/5210000000000?text=${message}`;
-}
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
